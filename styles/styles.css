@@ -1,0 +1,374 @@
+.element {
+  background: #fefef7;
+  background: radial-gradient(circle, #fefef7 0%, #85847f 75%, #4b4b42 100%);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  height: 100vh;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 100vw;
+  /* Hide arrows on Chrome, Safari, Edge, Opera */
+  /* Hide arrows on Firefox */
+}
+
+.element button, .element input, .element p, .element label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0.4em 0.1em;
+  padding: 0.2em 1.5em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.element input::-webkit-outer-spin-button,
+.element input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.element input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.element p {
+  padding: 0.3em 1.5em;
+}
+
+.element__calcu {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 45px;
+  height: 18em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  width: 35em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1c3e8e;
+  background: linear-gradient(135deg, #1c3e8e 0%, #137eb1 80%, #3ab4cd 100%);
+  -webkit-box-shadow: 9px 9px 25px -10px #000000;
+  box-shadow: 9px 9px 25px -10px #000000;
+  margin-top: 6em;
+}
+
+.element__calcu--calcForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0em 0.5em;
+  width: 33em;
+}
+
+.element__calcu .advice {
+  background-color: #dda1a1;
+  color: black;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.element__calcu .calcTittle {
+  background: none;
+  color: white;
+  font-size: 2em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  margin-bottom: 0;
+}
+
+.element__calcu .getResult:active {
+  background: #3e7cbe;
+  background: radial-gradient(circle, #3e7cbe 0%, #1a2e61 100%);
+  color: white;
+}
+
+.element__calcu input[name=radioCalc] {
+  display: none;
+}
+
+.element__calcu input[name=radioCalc]:checked + label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  background: #3e7cbe;
+  background: radial-gradient(circle, #3e7cbe 0%, #1a2e61 100%);
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 1px solid white;
+}
+
+.element__calcu .radioValues {
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.element__calcu .operations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.element__calcu .operations label {
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  cursor: pointer;
+  -webkit-appearance: button;
+  /* WebKit */
+  -moz-appearance: button;
+  /* Mozilla */
+  -o-appearance: button;
+  /* Opera */
+  -ms-appearance: button;
+  /* Internet Explorer */
+  appearance: button;
+  /* CSS3 */
+}
+
+.element__calcu #numbA {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.element__calcu #resultCalc {
+  border-radius: 0px 0px 30px 30px;
+  cursor: default;
+  padding: 0.4em 0em;
+}
+
+.element__pali {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 45px;
+  height: 18em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  width: 35em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1c3e8e;
+  background: linear-gradient(211deg, #1c3e8e 0%, #137eb1 80%, #3ab4cd 100%);
+  -webkit-box-shadow: -9px 9px 25px -10px #000000;
+  box-shadow: -9px 9px 25px -10px #000000;
+  margin-top: 6em;
+}
+
+.element__pali--inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0em 0.5em;
+  width: 33em;
+}
+
+.element__pali .paliTittle {
+  background: none;
+  color: white;
+  font-size: 2em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+
+.element__pali .resultPali {
+  cursor: default;
+  border-radius: 0px 0px 30px 30px;
+  padding: 1em 0em;
+}
+
+.element__pali .showResult {
+  padding: 0.8em 0em;
+}
+
+.element__pali .showResult:active {
+  background: #3e7cbe;
+  background: radial-gradient(circle, #3e7cbe 0%, #1a2e61 100%);
+  color: white;
+}
+
+.element__pali .wordToCheck {
+  border-radius: 20px 20px 0px 0px;
+  padding: 1em 0em;
+}
+
+.element__caesar {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 45px;
+  height: 18em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  width: 35em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1c3e8e;
+  background: linear-gradient(50deg, #1c3e8e 0%, #137eb1 80%, #3ab4cd 100%);
+  -webkit-box-shadow: 9px -9px 25px -10px #000000;
+  box-shadow: 9px -9px 25px -10px #000000;
+}
+
+.element__caesar .caesarTitte {
+  background: none;
+  color: white;
+  font-size: 2em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+
+.element__caesar .showCaesar:active {
+  background: #3e7cbe;
+  background: radial-gradient(circle, #3e7cbe 0%, #1a2e61 100%);
+  color: white;
+}
+
+.element__caesar--formCaesar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33em;
+}
+
+.element__caesar--formCaesar .resultCaesar {
+  border-radius: 0px 0px 30px 30px;
+  cursor: default;
+  padding: 1em 0em;
+}
+
+.element__caesar--formCaesar .wordCaesar {
+  border-radius: 20px 20px 0px 0px;
+  padding: 0.5em 0em;
+}
+
+.element__fibo {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 45px;
+  height: 18em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  width: 35em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #1c3e8e;
+  background: linear-gradient(344deg, #1c3e8e 0%, #137eb1 80%, #3ab4cd 100%);
+  -webkit-box-shadow: -9px -9px 25px -10px #000000;
+  box-shadow: -9px -9px 25px -10px #000000;
+}
+
+.element__fibo--fiboForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0em 0.5em;
+  width: 33em;
+}
+
+.element__fibo .fiboTittle {
+  background: none;
+  color: white;
+  font-size: 2em;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+
+.element__fibo .resultFibo {
+  cursor: default;
+  border-radius: 0px 0px 30px 30px;
+  padding: 1em 0em;
+}
+
+.element__fibo .showFibo {
+  padding: 0.8em 0em;
+}
+
+.element__fibo .showFibo:active {
+  background: #3e7cbe;
+  background: radial-gradient(circle, #3e7cbe 0%, #1a2e61 100%);
+  color: white;
+}
+
+.element__fibo .numberFibo {
+  border-radius: 20px 20px 0px 0px;
+  padding: 1em 0em;
+}
+/*# sourceMappingURL=styles.css.map */

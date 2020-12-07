@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple items app</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    
+</head>
+<body>
+    <div class="element">
+        <div class="element__calcu">
+            <div class="element__calcu--calcForm">
+                <p class="calcTittle">Calculator</p>
+                <!-- <p class="advice">&nbsp;&nbsp;&nbsp;</p> -->
+                <input id="numbA" value="" type="number" step=".1" maxlength="5">
+                <div class="operations">
+                    <input class="radioToButton" type="radio" name="radioCalc" id="sum" value="+"/>
+                        <label class="radioValues" for="sum">+</label>
+                    <input class="radioToButton"  type="radio" name="radioCalc" id="dec" value="-"/>
+                        <label class="radioValues" for="dec">-</label>
+                    <input class="radioToButton"  type="radio" name="radioCalc" id="mult" value="*"/>
+                        <label class="radioValues" for="mult">x</label>
+                    <input class="radioToButton"  type="radio" name="radioCalc" id="divis" value="/"/>
+                        <label class="radioValues" for="divis">/</label>
+                </div>
+                <input id="numbB" value="">
+                <button class="getResult" onclick="calculator()">=</button>
+                <p id="resultCalc">&nbsp;</p>
+            </div>
+        </div>
+
+        <div class="element__pali">
+            <div class="element__pali--inside">
+                <p class="paliTittle">Palindromes</p>
+                <input type="text" class="wordToCheck" placeholder="Enter your word" maxlength="22">
+                <button class="showResult" onclick="palindromes()">Click here to find out</button>
+                <p class="resultPali">&nbsp;</p>
+            </div>
+        </div>
+
+        <div class="element__caesar">
+            <div  class="element__caesar--formCaesar">
+                <p class="caesarTitte">Caesar Cipher</p>
+                <input type="text" class="wordCaesar" maxlength="40" placeholder="Text to cipher">
+                <input type="number" class="keyCaesar" placeholder="Numeric key">
+                <button class="showCaesar" onclick="caesar()">Click to find your Caesar code!</button>
+                <p class="resultCaesar">&nbsp;</p>
+            </div>
+        </div>
+        
+        <div class="element__fibo">
+            <div class="element__fibo--fiboForm">
+                <p class="fiboTittle">Fibonacci Sequence</p>
+                <input type="number" class="numberFibo"  placeholder="Get your Fibonacci sequence">
+                <button class="showFibo" onclick="fibonacci()">Show the Fibonacci sequence</button>
+                <p type="text" class="resultFibo">&nbsp;</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="apps.js"></script>
+</body>
+</html>
+
+
+<!-- 'call the function "calculator" with this as parameters:(first number, + - / or * quoted, second number)',
+'call the function "palindromes" with the word you want to test as parameter quoted',
+'call the caesar function with the word you want to cipher, coma, and the number of steps each letter should take',
+'find the fibonacci sequence by calling the fibonacci function and passing that number as parameter' -->

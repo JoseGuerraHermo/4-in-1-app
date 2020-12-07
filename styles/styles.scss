@@ -1,0 +1,262 @@
+
+// constant values
+$bgColor : rgb(224, 211, 200);
+$space : (18em / 4) - 1;
+
+@mixin card{
+    border: 2px  solid rgba(0,0,0,0.7);
+    border-radius: 45px;
+    height: 18em;
+    justify-content: space-around;
+    position: relative;
+    width: 35em;
+}
+
+
+@mixin center{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@mixin effectOnClick{
+    background: rgb(62,124,190);
+    background: radial-gradient(circle, rgba(62,124,190,1) 0%, rgba(26,46,97,1) 100%);
+    color: white;
+}
+
+@mixin font{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+@mixin tittles{
+    background: none;
+    color: white;
+    font-size: 2em;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+}
+
+
+.element{
+
+    // background-color: $bgColor;
+    background: rgb(254,254,247);
+    background: radial-gradient(circle, rgba(254,254,247,1) 0%, rgba(133,132,127,1) 75%, rgba(75,75,66,1) 100%); 
+    display: grid;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 100vw;
+
+
+    button, input, p, label{
+        @include font();
+        background-color: white;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        margin: 0.4em 0.1em;
+        padding: 0.2em 1.5em;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    /* Hide arrows on Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Hide arrows on Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    p{
+        padding: 0.3em 1.5em;
+    }
+
+
+
+    &__calcu{
+        @include card();
+        @include center();
+        background: rgb(28,62,142);
+        background: linear-gradient(135deg, rgba(28,62,142,1) 0%, rgba(19,126,177,1) 80%, rgba(58,180,205,1) 100%);
+        -webkit-box-shadow: 9px 9px 25px -10px #000000; 
+        box-shadow: 9px 9px 25px -10px #000000;
+        margin-top: 6em;
+        &--calcForm{
+            display: flex;
+            flex-direction: column;
+            margin: 0em 0.5em;
+            width: 33em;
+        }
+        .advice{
+            background-color: rgb(221, 161, 161);
+            color: black;
+            font-size: 0.9em;
+            margin: 0;
+        }
+        .calcTittle{
+            @include tittles();
+            margin-bottom: 0;
+        }
+        .getResult:active{
+            @include effectOnClick();
+        }
+        input[name=radioCalc] {
+            display:none;
+        }
+        input[name=radioCalc]:checked + label{
+            @include font();
+            @include effectOnClick();
+            box-sizing: border-box;
+            outline: 1px solid white;
+        }
+        .radioValues{
+            background-color: white;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .operations{
+            display: flex;
+            justify-content: space-between;
+            // align-items: center;
+            // justify-content: space-around;
+
+        }
+        .operations label {
+            padding-left: $space;
+            padding-right: $space;
+            
+            cursor:pointer;
+            -webkit-appearance: button;
+            /* WebKit */
+            -moz-appearance: button;
+            /* Mozilla */
+            -o-appearance: button;
+            /* Opera */
+            -ms-appearance: button;
+            /* Internet Explorer */
+            appearance: button;
+            /* CSS3 */
+        }
+        #numbA{
+            border-radius:  20px 20px 0px 0px;
+        }
+        #resultCalc{
+            border-radius: 0px 0px 30px 30px;
+            cursor: default;
+            padding: 0.4em 0em;
+        }
+        
+    }
+    &__pali{
+        @include card();
+        @include center();
+        // background-color:rgb(79, 148, 175);
+        background: rgb(28,62,142);
+        background: linear-gradient(211deg, rgba(28,62,142,1) 0%, rgba(19,126,177,1) 80%, rgba(58,180,205,1) 100%); 
+        -webkit-box-shadow: -9px 9px 25px -10px #000000; 
+        box-shadow: -9px 9px 25px -10px #000000;
+        margin-top: 6em;
+        &--inside{
+
+            display: flex;
+            flex-direction: column;
+            margin: 0em 0.5em;
+            width: 33em;
+            
+            }
+            .paliTittle{
+                @include tittles();
+            }
+            .resultPali{
+                cursor: default;
+                border-radius: 0px 0px 30px 30px;
+                padding: 1em 0em;
+            }
+            .showResult{
+             padding: 0.8em 0em;
+            }
+            .showResult:active{
+             @include effectOnClick();
+            }
+            .wordToCheck{
+             border-radius:  20px 20px 0px 0px;
+             padding: 1em 0em;
+             
+        }
+        
+    }
+    &__caesar{
+        @include card();
+        @include center();
+        .caesarTitte{
+            @include tittles();
+        }
+        .showCaesar:active{
+            @include effectOnClick(); 
+        }
+        &--formCaesar{
+            display: flex;
+            flex-direction: column;
+            width: 33em;
+            .resultCaesar{
+                border-radius: 0px 0px 30px 30px;
+                cursor: default;
+                padding: 1em 0em;
+            }
+            .wordCaesar{
+                border-radius:  20px 20px 0px 0px;
+                padding: 0.5em 0em;
+            }
+        }
+        background: rgb(28,62,142);
+        background: linear-gradient(50deg, rgba(28,62,142,1) 0%, rgba(19,126,177,1) 80%, rgba(58,180,205,1) 100%); 
+        -webkit-box-shadow: 9px -9px 25px -10px #000000; 
+        box-shadow: 9px -9px 25px -10px #000000;    
+    }
+
+
+    &__fibo{
+        @include card();
+        @include center();
+        background: rgb(28,62,142);
+        background: linear-gradient(344deg, rgba(28,62,142,1) 0%, rgba(19,126,177,1) 80%, rgba(58,180,205,1) 100%); 
+        -webkit-box-shadow: -9px -9px 25px -10px #000000; 
+        box-shadow: -9px -9px 25px -10px #000000;
+        &--fiboForm{
+
+            display: flex;
+            flex-direction: column;
+            margin: 0em 0.5em;
+            width: 33em;
+            
+            }
+            .fiboTittle{
+                @include tittles();
+            }
+            .resultFibo{
+                cursor: default;
+                border-radius: 0px 0px 30px 30px;
+                padding: 1em 0em;
+            }
+            .showFibo{
+             padding: 0.8em 0em;
+            }
+            .showFibo:active{
+             @include effectOnClick();
+            }
+            .numberFibo{
+             border-radius:  20px 20px 0px 0px;
+             padding: 1em 0em;
+        }
+    }
+}
